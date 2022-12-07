@@ -1,0 +1,181 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tutoriginal 19</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;600&family=Cedarville+Cursive&family=Poppins:wght@100;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a6ba4900c1.js" crossorigin="anonymous"></script></head>
+	<script src="./js/view.js"></script>
+	
+<body class="bg" onload="bulletEvents()">
+
+    <div class="baner">
+        <div class="logo">Tutoriginal 19</div>
+        <div class="setting" onclick="">
+            <button id="set_but">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="sideBar">
+        <div class="profil">
+            <div class="photo">
+                <img src="img/pamartin.png" alt="">
+            </div>
+            <div class="name">Pamartin</div>
+        </div>
+        <div class="menu">
+            <ul class="pages">
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="meta.html">Meta</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="enroll.html">Enroll</a></li>
+                <li><a href="piscine_analyzer.html">Piscine Analyzer</a></li>
+            </ul>
+        </div>
+    </div>
+
+	<div class="board">
+		<div class="container">
+			<div class="dash">
+				<div class="child">
+					<div class="title">
+						Cluster Frequentation
+					</div>
+					<div class="dataUpdate">
+						<p>Last update: 12:45 06/12/2022</p>
+					</div>
+					<div class="content ">
+						<div class="cluster">
+							<div class="desktop">
+								<div class="percent" style="--clr: #6f6486; --num:31">
+									<svg>
+										<circle cx="70" cy="70" r="70"></circle>
+										<circle cx="70" cy="70" r="70"></circle>
+								
+									</svg>
+									<div class="cluster_id">
+										<p>SHI</p>
+										<span>28/89</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cluster">
+							<div class="desktop">
+								<div class="percent" style="--clr: #6f6486; --num:14.5">
+									<svg>
+										<circle cx="70" cy="70" r="70"></circle>
+										<circle cx="70" cy="70" r="70"></circle>
+									</svg>
+									<div class="cluster_id">
+										<p>FU </p>
+										<span>14/97</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cluster">
+							<div class="desktop">
+								<div class="percent" style="--clr: #6f6486; --num:13.1">
+									<svg>
+										<circle cx="70" cy="70" r="70"></circle>
+										<circle cx="70" cy="70" r="70"></circle>
+									</svg>
+									<div class="cluster_id">
+										<p>MI</p>
+										<span>8/61</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="child">
+					<div class="title">
+						Events
+					</div>
+					<div class="events">
+						<section class="carousel">
+							<div class="previous">
+								<button class="switch" id="left" onclick="getPast()"><i class="fa-solid fa-arrow-left"></i></button>
+							</div>
+							<div class="card-event" id="show">
+								<div class="box-card">
+									<div class="front">
+										<div class="info">
+											<div class="info-titre">
+												<p><span>Tue 09 Mar 2021 at 12:19</span><br>
+													 Remothon Light</p>
+											</div>
+										</div>
+									</div>
+									<div class="back">
+										<div class="info">
+											<div class="description">
+												<p>Remothon is back baby! For this edition, we'll spend 12 hours together on Discord working on our projects, playing games and just chilling together!</p>
+											</div>
+											<button class="more">Read more</button>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-event" style="display: none;">
+								<div class="box-card">
+									<div class="front">
+										<div class="info">
+											<div class="info-titre">
+												<p><span>Fri 17 Dec 2021 at 12:00</span><br>
+													Secret Santa</p>
+											</div>
+										</div>
+									</div>
+									<div class="back">
+										<div class="info">
+											<div class="description">
+												<p>Celebrate Christmas with us!</p>
+											</div>
+											<button class="more">Read more</button>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="card-event" style="display: none;">
+								<div class="box-card">
+									<div class="front">
+										<div class="info">
+											<div class="info-titre">
+												<p><span>Fri 30 Oct 2020 at 12:19</span><br>
+													Remothon</p>
+											</div>
+										</div>
+									</div>
+									<div class="back">
+										<div class="info">
+											<div class="description">
+												<p>Work around the clock in this 24 hours long coding event centered around socializing and doing your school projects from Discord.</p>
+											</div>
+											<button class="more">Read more</button>	
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="next">
+								<button class="switch" id="right" onclick="getNext()"><i class="fa-solid fa-arrow-right"></i></button>
+							</div>	
+						</section>
+						<div class="bullet">
+							<ul id="dot">
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <i class="fa-solid fa-desktop"></i>
+</body>
+</html>
