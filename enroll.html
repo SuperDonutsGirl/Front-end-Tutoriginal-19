@@ -5,6 +5,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;600&family=Cedarville+Cursive&family=Poppins:wght@100;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a6ba4900c1.js" crossorigin="anonymous"></script></head>
+	<script src="./js/form.js"></script>
+
 <body class="bg">
 
     <div class="baner">
@@ -37,9 +39,218 @@
 
 	<div class="board">
 		<div class="container">
+            <div class="contact enroll">
+                <div class="child">
+                    <div class="title">
+                        Enroll
+                    </div>
+                    <div class="content">
+                        <div class="container-enroll">
+                            <div class="bloc-enroll" id="show">
+                                <div class="title_bloc">
+                                    Become Tutor
+                                </div>
+                                <div class="text-bloc">
+                                    <div class="bloc1">
+                                        <p>If you want to become a tutor, you can fill the form below. We'll get back to you soon™️!</p>
+                                        <p>If you are intrested in becoming a supervising tutor, recruitement posts are done every few months.</p>
+                                        <p>If you haven't read <a href="meta.html">the metas</a> yet, we strongly advise you to do so.</p>
+                                        <p>We look forward to getting to know you!</p>
+                                    </div>
+                                  
+                                </div>
+                                <div class="btn-enroll">
+                                    <button onclick="formulaire()">Access to the form</button>
+                                </div>
+                            </div>
+                            <div class="bloc-enroll" style="display: none;">
+                                <div class="title_bloc">
+                                    Become Tutor
+                                </div>
+                                <div class="text-bloc">
+                                    <div class="bloc1">
+                                        <p> 
+                                            <p>Here is a non exhaustive list of activities a tutor can perform, Is there something in particular you're passionate about?</p>
+                                            <label class="checkbox">
+                                                <input type="checkbox" class="checkbox-list" name="exams" value="exams" />
+                                                <span class="element">Monitoring exams</span><br>
+                                                <input type="checkbox" class="checkbox-list" name="SLTC" value="SLTC"/>
+                                                <span class="element">Supervising 'She Loves To Code' events</span><br>
+                                                <input type="checkbox" class="checkbox-list" name="bocal" value="bocal"/>
+                                                <span class="element">Helping the bocal</span><br>
+                                                <input type="checkbox" class="checkbox-list" name="events" value="events"/>
+                                                <span class="element">Organize events for students</span><br>
+                                                <input type="checkbox" class="checkbox-list" name="piscines" value="piscines"/>
+                                                <span class="element">Supervising the piscines</span><br>
+                                                <input type="checkbox" class="checkbox-list" name="vibes" value="vibes"/>
+                                                <span class="element">Bringing good vibes to 19</span><br>
+                                            </label>
+                                         </p>
+                                    </div>
+                                    <div class="bloc2"></div>
+                                </div>
+                                <div class="btn-enroll">
+                                    <button  onclick="formulaire()">Next Step</button>
+                                </div>                    
+                            </div>
+                            <div class="bloc-enroll" style="display: none;">
+                                <div class="title_bloc">
+                                    Become Tutor
+                                </div>
+                                <div class="text-bloc">
+                                    <div class="bloc1">
+                                        <p> 
+                                            <p>How did you hear about the tutors? (if it was a particular student, drop their login)*</p>
+                                            <label class="area">
+                                                <textarea class="t-area" name="hear about" id="hear-about" cols="50" rows="10"></textarea>
+                                            </label>
+                                         </p>
+                                    </div>
+                                </div>
+                                <div class="btn-enroll">
+                                    <button  onclick="formulaire()">Next Step</button>
+                                </div>
+                            </div>
+                            <div class="bloc-enroll" style="display: none;">
+                                <div class="title_bloc">
+                                    Become Tutor
+                                </div>
+                                <div class="text-bloc">
+                                    <div class="bloc1">
+                                        <p> 
+                                            <p>Which languages do you know? Whether your fluent or still learning, let us know*</p>
+                                            <label class="area">
+                                                <textarea class="t-area" name="language" id="language" cols="50" rows="10"></textarea>
+                                            </label>
+                                         </p>
+                                    </div>
+                                </div>
+                                <div class="btn-enroll">
+                                    <button  onclick="formulaire()">Next Step</button>
+                                </div>
+                            </div>
+                            <div class="bloc-enroll" style="display: none;">
+                                <div class="title_bloc">
+                                    Become Tutor
+                                </div>
+                                <div class="text-bloc">
+                                    <div class="bloc1">
+                                        <p> 
+                                            <p>Why would you like to become a tutor?*</p>
+                                            <label class="area">
+                                                <textarea class="t-area" name="why" id="why" cols="50" rows="10"></textarea>
+                                            </label>
+                                         </p>
+                                    </div>
+                                </div>
+                                <div class="btn-enroll">
+                                    <button  onclick="formulaire()">Next Step</button>
+                                </div>
+                            </div>
+                            <div class="bloc-enroll" style="display: none;">
+                                <div class="title_bloc">
+                                    Become Tutor
+                                </div>
+                                <div class="text-bloc">
+                                    <div class="bloc1">
+                                        <p> 
+                                            <p>If you have a favorite meme, leave the link below!</p>
+                                            <label class="area">
+                                                <textarea class="t-area" name="meme" id="meme" cols="50" rows="10"></textarea>
+                                            </label>
+                                         </p>
+                                    </div>
+                                </div>
+                                <div class="btn-enroll">
+                                    <button  onclick="resumForm()">Next Step</button>
+                                    
+                                </div>
+                            </div>
+                            <div class="bloc-enroll" style="display: none;">
+                                <div class="title_bloc">
+                                    Resum
+                                </div>
+                                <div class="resum">
+                                    <div class="bloc1">
+                                        <div class="question">
+                                            Here is a non exhaustive list of activities a tutor can perform, Is there something in particular you're passionate about?
+                                        </div>
+                                        <div class="answer">
+                                            <ul id="list-res">
+                                            </ul>
+                                        </div>
+                                        <div class="mod">
+                                            <button class="modify" onclick="modify(this)">Modify</button>
+                                        </div>
+                                    </div>
+                                    <div class="bloc1">
+                                        <div class="question">
+                                            How did you hear about the tutors? (if it was a particular student, drop their login)*
+                                        </div>
+                                        <div class="answer" id="hear-about-res"></div>
+                                        <div class="mod">
+                                            <button class="modify" onclick="modify(this)">Modify</button>
+                                        </div>
+                                    </div>
+                                    <div class="bloc1">
+                                        <div class="question">
+                                            Which languages do you know? Whether your fluent or still learning, let us know*
+                                        </div>
+                                        <div class="answer" id="language-res"></div>
+                                        <div class="mod">
+                                            <button class="modify" onclick="modify(this)">Modify</button>
+                                        </div>
+                                    </div>
+                                    <div class="bloc1">
+                                        <div class="question">Why would you like to become a tutor?*</div>
+                                        <div class="answer" id="why-res"></div>
+                                        <div class="mod">
+                                            <button class="modify" onclick="modify(this)">Modify</button>
+                                        </div>
+                                    </div>
+                                    <div class="bloc1">
+                                        <div class="question">If you have a favorite meme, leave the link below!</div>
+                                        <div class="answer" id="meme-res"></div>
+                                        <div class="mod">
+                                            <button class="modify" onclick="modify(this)">Modify</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-enroll">
+                                    <button onclick="formulaire()">Submit</button>
+                                </div>
+                            </div>
+                            <div class="success" style="display: none;">
+                                <div class="msg-success">
+                                    <div class="msg-icon">
+                                        <img src="./img/success.png" alt="check">
+                                        <p>Form sent successfully</p>
+                                    </div>
+                                    <div class="btn-enroll">
+                                        <button onclick="submit()">Close</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                        
+                        </div>
+                        <div class="bullet">
+                            <ul id="dot" style="display: none;">
+                                <li class="dot-list"><i class="fa-solid fa-circle"></i></li>
+                                <li class="dot-list"><i class="fa-solid fa-circle"></i></li>
+                                <li class="dot-list"><i class="fa-solid fa-circle"></i></li>
+                                <li class="dot-list"><i class="fa-solid fa-circle"></i></li>
+                                <li class="dot-list"><i class="fa-solid fa-circle"></i></li>
+                                <li class="dot-list"><i class="fa-solid fa-circle"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
 			
 		</div>
 	</div>
-    
 </body>
 </html>

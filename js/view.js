@@ -32,7 +32,7 @@ function getNext(){
         if (idStr == "show")
         {
             card[i].removeAttribute('id');
-            card[i].style.display = "none"
+            card[i].style.display = "none";
             dot[i].removeAttribute('id');
             if (i + 1 < len)
             {
@@ -51,7 +51,6 @@ function getNext(){
         i++;
     }
 }
-
 
 function getPast(){
 

@@ -470,7 +470,8 @@ ul.list{
     height: 315% !important;
 }
 
-.container .big{
+.container .team,
+.container .enroll{
     width: 100%;
     height: 100%;
 }
@@ -623,6 +624,188 @@ ul.list{
 
 
 
+
+
+
+/*Enroll*/
+.enroll .child .content{
+    width: 100%;
+    height: 88%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-enroll{
+    width: 90%;
+    height: 85%;
+
+}
+.bloc-enroll{
+    width: 100%;
+    height: 100%;
+    border: solid #6f6486;
+    display: block;
+}
+.text-bloc{
+    width: 94%;
+    height: 80%;
+    padding: 0 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bloc1{
+    width: 100%;
+    height: auto;
+}
+.bloc1 p{
+    color: #9388a7;
+}
+.bloc1 p a{
+    color: #9388a7;
+    font-style: oblique;
+    text-decoration: underline;
+}
+.bloc2{
+    width: 100%;
+    height: auto;
+    background-color: blue;
+}
+.btn-enroll{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.btn-enroll button{
+    border: none;
+    background-color: #6f6486;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+label span{
+    color: #9388a7;
+}
+input[type=checkbox]{
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+input[type=checkbox]:before{
+    content: "";
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-color:#9388a7;
+
+}
+input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    transition: all 0.2s linear;
+    background-color:#4f475e;
+}
+input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid #9388a7;
+    border-width: 0 2px 2px 0;
+
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -5px;
+    left: 6px;
+}
+
+.area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.t-area{
+    background-color: #9388a7;
+    color: #252636;
+}
+
+.resum{
+    overflow: auto;
+    height: 80%;
+}
+
+.question,
+.answer{
+    color: grey ;
+}
+
+.question{
+    padding-top: 5%;
+    padding-left: 2%;
+}
+.answer{
+    color: #9388a7;
+    padding-left: 5%;
+}
+
+.answer ul{
+    list-style: none;
+    padding: 0;
+}
+.mod{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mod button{
+    margin-right: 10%;
+    border: none;
+    background-color: #4b4559;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #9388a7;
+}
+
+.msg-success{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.msg-success .btn-enroll{
+    width: 100%;
+}
+
+.msg-icon{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.msg-icon img{
+    height: 50%;
+}
+.msg-icon p{
+    color: #1e9200;
+    padding-left: 5%;
+}
 
 
 
