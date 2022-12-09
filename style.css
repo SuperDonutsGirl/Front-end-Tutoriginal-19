@@ -612,9 +612,16 @@ ul.list{
 }
 .bullet ul#dot li{
     list-style: none;
+}
+.bullet ul#dot li button i.dot-list{
     font-size:small;
     color: #4f475e;
     padding: 0 15% 0 15%;
+}
+li button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 #active{

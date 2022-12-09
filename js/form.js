@@ -119,3 +119,41 @@ function submit(){
         bloc[i].style.display = "none";
     }
 }
+
+function changeSection(elmt_selected){
+    let bloc = document.getElementsByClassName('bloc-enroll');
+    let len_bloc = bloc.length;
+    let btn_dot = document.getElementsByClassName("dot-link");
+    let btn_len_dot = btn_dot.length;
+    let dot = document.getElementsByClassName("dot-list");
+    let len_dot = dot.length;
+
+    /*Hide current bloc*/
+    for (i = 0; i < len_bloc; i++){
+        var idBloc = bloc[i].id;
+        if (idBloc == "show"){
+            bloc[i].removeAttribute('id');
+            bloc[i].style.display = "none";
+            /*Remove current dot*/
+            dot[i - 1].removeAttribute('id');
+            i = len_bloc;
+        }
+    }
+
+    /*Add Id select for this dot*/
+    elmt_selected.id = "select";
+    for (i = 0; i < btn_len_dot; i++){
+        /*Find selected button*/
+        var dotId = btn_dot[i].id;
+        if (dotId == "select"){
+            bloc[i + 1].style.display = "block";
+            bloc[i + 1].id = "show";
+            /*Update dot*/
+            dot[i].id = "active";
+            i = btn_len_dot;
+        }
+    }
+
+    /*Reset dot's Id "select"*/
+    elmt_selected.removeAttribute("id");
+}

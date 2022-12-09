@@ -9,9 +9,9 @@ function bulletEvents(){
     while (i < len)
     {
         if (i == 0 )
-            ulField.innerHTML += `<li class="dot-list"id="active"><i class="fa-solid fa-circle"></i></li>`;
+        ulField.innerHTML += `<li><button><i id="active"class="dot-list fa-solid fa-circle"></i></button></li>`
         else
-            ulField.innerHTML += `<li class="dot-list"><i class="fa-solid fa-circle"></i></li>`;
+            ulField.innerHTML += `<li><button><i class="dot-list fa-solid fa-circle"></i></button></li>`
         i++;
     }
 }
