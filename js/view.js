@@ -9,13 +9,46 @@ function bulletEvents(){
     while (i < len)
     {
         if (i == 0 )
-        ulField.innerHTML += `<li><button><i id="active"class="dot-list fa-solid fa-circle"></i></button></li>`
+        ulField.innerHTML += `<li><button class="btnDot" onclick="getSelect(this)"><i id="active"class="dot-list fa-solid fa-circle"></i></button></li>`
         else
-            ulField.innerHTML += `<li><button><i class="dot-list fa-solid fa-circle"></i></button></li>`
+            ulField.innerHTML += `<li><button class="btnDot" onclick="getSelect(this)"><i class="dot-list fa-solid fa-circle"></i></button></li>`
         i++;
     }
 }
 
+function getSelect(elemt){
+    let dot = document.getElementsByClassName("dot-list");
+    let card = document.getElementsByClassName("card-event");
+    let btnDot = document.getElementsByClassName("btnDot");
+    let len = dot.length;
+
+    /*Remove current dot and hide current card*/
+    for (i = 0; i < len; i++){
+        var idDot = dot[i].id;
+        if (idDot == "active"){
+            dot[i].removeAttribute('id');
+            card[i].removeAttribute('id');
+            card[i].style.display = "none";
+            i = len;
+        }
+    }
+
+    /*Add Id select*/
+    elemt.id = "select";
+    /*Find selected button and show selected card*/
+    for (i = 0; i < len; i++){
+        var idBtn = btnDot[i].id;
+        if (idBtn == "select"){
+            card[i].style.display = "flex";
+            card[i].id = "show";
+            dot[i].id = "active"
+            i = len;
+        }
+    }
+
+    /*Reset dot's Id "select"*/
+    elemt.removeAttribute("id");
+}
 
 
 
