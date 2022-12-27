@@ -42,6 +42,7 @@ a{
     font-weight: bold;
     padding-left: 1em;
 }
+
 .baner .setting{
    padding-right: 20px;
 }
@@ -49,6 +50,12 @@ a{
     border: none;
     background-color: transparent;
     cursor: pointer;
+}
+
+@media screen and (max-width: 450px){
+    .baner {
+        height: 5%;
+    }
 }
 
 /*Side Bar*/
@@ -86,7 +93,6 @@ a{
 }
 .menu{
     height: 100%;
-	overflow: auto;
 }
 .menu ul.pages{
 	padding-left: 5%;
@@ -102,12 +108,70 @@ a{
 	padding-top: 1em;
     padding-bottom: 1em;
     padding-left: 5%;
+    list-style: none;
 }
 a.active{
     color: #6f6486 !important;
     font-weight: bolder;
 }
 
+
+@media screen and (max-width: 450px){
+    .sideBar{
+        height: 10%;
+        width: 100%;
+        top: 5%;
+        display: flex;
+        border-bottom: solid 1px #bdbdbd90;
+    }
+    .sideBar .profil{
+        max-width: 20%;
+        min-width: 80px;
+        height: 100%;
+        align-content: center;
+        flex-direction: column;
+        border: none;
+    }
+    .sideBar .photo{
+        width: 40%;
+    }
+    .sideBar .name{
+        font-weight: 500px;
+        color: #bdbdbd;
+        padding-top: 5px;
+    }
+    .menu{
+        width: 80%;
+        margin: 0;
+        overflow: visible;
+    }
+    .menu ul.pages{
+        margin: 0;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 25% 25%;
+        align-items: center;
+        justify-items: start;
+        align-content: center;
+    }
+    .menu ul.pages li a{
+        cursor: pointer;
+        padding: 0;
+        font-size: 0.7em !important;
+    }
+    .menu ul.pages li{
+        padding: 0 0 0 5%;
+        text-decoration: none;
+        list-style: none;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .menu ul.pages li a{
+        font-size: 0.7em !important;
+    }
+}
 
 /*board*/
 .board{
@@ -166,7 +230,7 @@ a.active{
     display: flex;
     justify-content: flex-end;
     font-size: smaller;
-    color: #00000080;
+    color: 0d0c0c;
 }
 
 .child .content{
@@ -287,19 +351,41 @@ a.active{
 
 
 /*META*/
-
+@media screen and (max-width: 450px){
+    .meta{
+        width: 100%;
+        height: 10%;
+    }
+    .container{
+        position: fixed;
+    }
+    .container .meta{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        height: 50% !important;
+        overflow: auto;
+        position: fixed;
+    }
+    .meta .child{
+        width: 100% !important;
+        height: 100%;
+    }
+}
 .container .meta{
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+
 }
 
 
 .meta .child{
     width: 48%;
-    height: 95%;
+    height: 100%;
     background-color: #6f64861a;
     border-radius: 5px;
 }
@@ -312,7 +398,7 @@ a.active{
     overflow: auto;
 }
 
-p.text{
+.meta .child .content p.text{
     width: 100%;
     height: auto;
     font-size: 0.9em;
@@ -337,6 +423,13 @@ ul.list{
     display: flex;
     flex-wrap: wrap;
 }
+.contact .child .content p.text{
+    width: 100%;
+    height: auto;
+    font-size: 0.9em;
+    color: #6f6486;
+    margin: 2%;
+}
 
 
 
@@ -348,6 +441,7 @@ ul.list{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 
 .student{
     width: 30%;
@@ -410,16 +504,58 @@ ul.list{
     width: 100%;
     height: auto;
     border-radius: 300px;
+    position: absolute;
+}
+#super:after{
+    content: "★";
+    position: relative;
+    background-color: #393344;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+    border-radius: 50px;
+    border: solid #4f475e;
+    color: #bdbdbd;
 }
 
 
+@media screen and (max-width: 820px){
+    .contact .child .content{
+        height: 88%;
+        display: flex;
+        overflow: auto;
+    }
+    .listStudent{
+        width: 100%;
+        height: 75%;
+        display: flex;
+        align-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .student{
+        width: 80%;
+        height: 30%;
+        justify-content: center;
+    }
+    .student .photo{
+        width: 25%;
+        height: 75%;
+        z-index: 1;
+        position: absolute;
+        right: 70%;
+        top: 15%;
+    }
+    
+}
 
 
 /*TEAM*/
-.team{
+#team{
+    height: 88% !important;
     display: flex;
     justify-content: center;
     align-content: flex-start;
+    overflow: auto;
 }
 
 
@@ -428,47 +564,34 @@ ul.list{
     width: 95%;
     height: 20%;
 }
-.team p.text{
+#team p.text{
     width: 100%;
-    height: auto;
+    height: 10%;
     font-size: 1.8em;
     color: #6f6486;
     margin-top: 4%;
+    margin-left: 2%;
+}
+p.text-title{
+    width: 100%;
+    height: 10%;
+    font-size: 1.8em;
+    color: #6f6486;
+    text-align: center;
+    margin: 0;
 }
 
-.team p.text span{
+p.text span{
     margin-top: -5px;
     font-size: 0.4em;
-}
-
-.supervising{
-    width: 95%;
-    height: 30%;
-    margin-bottom: 5%;
-    border-top: solid #6f6486;
-    border-left: solid #6f6486;
-}
-
-.tutoring{
-    width: 95%;
-    height: 30%;
-    border-top: solid #6f6486;
-    border-left: solid #6f6486;
-    overflow: auto;
-}
-
-.title_bloc{
-    background-color: #6f6486;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 300;
     
 }
 
-.student.t{
-    height: 315% !important;
-}
+
+
+
+
+
 
 .container .team,
 .container .enroll{
@@ -632,9 +755,21 @@ li button{
 
 
 
-
-
 /*Enroll*/
+@media screen and (max-width: 450px){
+    .board,
+    .container{
+        width: 90%;
+        height: 75%;
+        position: fixed;
+        top: 20%;
+        left: 5%;
+        overflow: auto;
+    }
+    .text-bloc{
+        overflow: auto;
+    }
+}
 .enroll .child .content{
     width: 100%;
     height: 88%;
@@ -652,6 +787,11 @@ li button{
     height: 100%;
     border: solid #6f6486;
     display: block;
+}
+.title_bloc{
+    color: #6f6486;
+    padding: 10px 10px 0;
+    font-size: 1.5em;
 }
 .text-bloc{
     width: 94%;
@@ -672,11 +812,6 @@ li button{
     color: #9388a7;
     font-style: oblique;
     text-decoration: underline;
-}
-.bloc2{
-    width: 100%;
-    height: auto;
-    background-color: blue;
 }
 .btn-enroll{
     width: 100%;
@@ -793,6 +928,7 @@ input[type=checkbox]:checked:after {
     display: flex;
     align-items: center;
     justify-content: center;
+    align-content: center;
     flex-direction: column;
 }
 
@@ -801,7 +937,7 @@ input[type=checkbox]:checked:after {
 }
 
 .msg-icon{
-    width: 100%;
+    width: 95%;
     height: 20%;
     display: flex;
     align-items: center;
@@ -815,5 +951,120 @@ input[type=checkbox]:checked:after {
     padding-left: 5%;
 }
 
+
+
+
+
+
+
+#listStudent{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#student{
+    width: 25%;
+    height: 315%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+#identity{
+    width: 80%;
+    height: 50%;
+    border-radius: 10px;
+    z-index: 0;
+    position: absolute;
+}
+#identity #nickname,
+#identity #name{
+    width: 120%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    left: 55%;
+}
+#identity #nickname{
+    background-color: #4f475e;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+#identity #name{
+    background-color: #393344;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#identity #nickname p,
+#identity #name p{
+    padding-left: 30%;
+    color: #bdbdbd;
+}
+#identity #nickname p{
+    font-size: 1em;
+    font-weight: 600;
+   
+}
+#identity #name p{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+
+#student #photo{
+    width: 40%;
+    max-width: 80px;
+    height: 50%;
+    z-index: 1;
+    position: absolute;
+    right: 55%;
+}
+#student #photo img{
+    width: 100%;
+    height: auto;
+    border-radius: 300px;
+}
+
+@media screen and (max-width: 450px){
+    .card{
+        width: 100%;
+        height: 88%;
+        display: flex;
+        overflow: auto;
+    }
+    #listStudent{
+        width: 100%;
+        height: 75%;
+        display: flex;
+        align-content: center;
+    }
+    #student{
+        width: 80%;
+        height: 30%;
+        display: flex;
+        justify-content: center;
+    }
+    #identity #nickname,
+    #identity #name{
+    width: 100%;
+    height: 150%;
+    display: flex;
+    align-items: center;
+    left: 55%;
+    }
+    #student #photo{
+        width: 25%;
+
+        height: 50%;
+        z-index: 1;
+        position: absolute;
+        right: 55%;
+    }
+}
 
 
