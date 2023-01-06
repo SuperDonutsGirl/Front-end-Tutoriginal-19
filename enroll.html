@@ -23,7 +23,7 @@
             <div class="photo">
                 <img src="img/pamartin.png" alt="">
             </div>
-            <div class="name">Pamartin</div>
+            <div id="name">Pamartin</div>
         </div>
         <div class="menu">
             <ul class="pages">
@@ -161,7 +161,7 @@
                                     </div>
                                 </div>
                                 <div class="btn-enroll">
-                                    <button  onclick="resumForm()">Next Step</button>
+                                    <button  onclick="resumForm(1)">Next Step</button>
                                     
                                 </div>
                             </div>
@@ -221,7 +221,7 @@
                             </div>
                             <div class="success" style="display: none;">
                                 <div class="msg-success">
-                                    <div class="msg-icon">
+                                    <div class="msg-icon-success">
                                         <img src="./img/success.png" alt="check">
                                         <p>Form sent successfully</p>
                                     </div>
@@ -229,7 +229,17 @@
                                         <button onclick="submit()">Close</button>
                                     </div>
                                 </div>
-                                
+                            </div>
+                            <div class="success" style="display: none;">
+                                <div class="msg-success">
+                                    <div class="msg-icon-warning">
+                                        <img src="./img/warning.png" alt="warning">
+                                        <p>You are already tutor</p>
+                                    </div>
+                                    <div class="btn-enroll">
+                                        <button onclick="submit()">Close</button>
+                                    </div>
+                                </div>
                             </div>
 
                         

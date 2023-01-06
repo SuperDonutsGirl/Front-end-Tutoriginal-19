@@ -1,0 +1,25 @@
+{
+  "name": "front-end-tutoriginal-19",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dashboard.js",
+  "scripts": {
+    "start": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuperDonutsGirl/Front-end-Tutoriginal-19.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuperDonutsGirl/Front-end-Tutoriginal-19/issues"
+  },
+  "homepage": "https://github.com/SuperDonutsGirl/Front-end-Tutoriginal-19#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4"
+  }
+}

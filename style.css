@@ -86,7 +86,7 @@ a{
     border-radius: 300px;
     filter: grayscale(100%);
 }
-.sideBar .name{
+.sideBar #name{
    font-size: 0.8em;
    font-weight: 500;
    color: #bdbdbd;
@@ -135,7 +135,7 @@ a.active{
     .sideBar .photo{
         width: 40%;
     }
-    .sideBar .name{
+    .sideBar #name{
         font-weight: 500px;
         color: #bdbdbd;
         padding-top: 5px;
@@ -936,18 +936,24 @@ input[type=checkbox]:checked:after {
     width: 100%;
 }
 
-.msg-icon{
+.msg-icon-warning,
+.msg-icon-success{
     width: 95%;
     height: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.msg-icon img{
+.msg-icon-warning img,
+.msg-icon-success img{
     height: 50%;
 }
-.msg-icon p{
+.msg-icon-success p{
     color: #1e9200;
+    padding-left: 5%;
+}
+.msg-icon-warning p{
+    color: #aa283a;
     padding-left: 5%;
 }
 

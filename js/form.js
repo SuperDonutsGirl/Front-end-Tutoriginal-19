@@ -27,19 +27,30 @@ function  formulaire(){
         }
         if (i == len - 1){
             let success = document.getElementsByClassName("success");
-            success[0].style.display = "block";
+            var id = document.getElementById('name').textContent;
+
+            if (id == "Ade-la-c")
+                success[1].style.display = "block";
+            else
+                success[0].style.display = "block";
             dList.style.display = "none"
         }
     }
 }
 
-function resumForm(){
+function resumForm(type){
     let box = document.getElementsByClassName("checkbox-list");
     let span = document.getElementsByClassName("element");
     let answer1 = document.getElementById("list-res");
 
-    formulaire();
+    if (type == 1)
+        formulaire();
 
+    for (i = 0; i < box.length; i++){
+        if (box[i].checked == true){
+            answer1.innerHTML = ``;
+        }
+    }
     for (i = 0; i < box.length; i++){
         if (box[i].checked == true){
             answer1.innerHTML += `<li class="checked">${span[i].innerHTML}</li>`;
@@ -54,10 +65,10 @@ function resumForm(){
     let question5 = document.getElementById("meme-res");
     let answer5 = document.getElementById("meme").value;
 
-    question2.innerHTML += answer2;
-    question3.innerHTML += answer3;
-    question4.innerHTML += answer4;
-    question5.innerHTML += answer5;
+    question2.innerHTML = answer2;
+    question3.innerHTML = answer3;
+    question4.innerHTML = answer4;
+    question5.innerHTML = answer5;
 
 }
 
@@ -110,7 +121,7 @@ function modify(elmt){
 
 function submit(){
     let bloc = document.getElementsByClassName('bloc-enroll');
- 
+
     window.location.href="./dashboard.html";
     bloc[0].style.display = "block";
     bloc[0].id = "show";
@@ -132,11 +143,11 @@ function changeSection(elmt_selected){
     for (i = 0; i < len_bloc; i++){
         var idBloc = bloc[i].id;
         if (idBloc == "show"){
-            bloc[i].removeAttribute('id');
-            bloc[i].style.display = "none";
-            /*Remove current dot*/
-            dot[i - 1].removeAttribute('id');
-            i = len_bloc;
+                bloc[i].removeAttribute('id');
+                bloc[i].style.display = "none";
+                /*Remove current dot*/
+                dot[i - 1].removeAttribute('id');
+                i = len_bloc;
         }
     }
 
@@ -150,6 +161,10 @@ function changeSection(elmt_selected){
             bloc[i + 1].id = "show";
             /*Update dot*/
             dot[i].id = "active";
+            if (i == btn_len_dot -1){
+                console.log("coucou\n");
+                resumForm(0);
+            }
             i = btn_len_dot;
         }
     }
